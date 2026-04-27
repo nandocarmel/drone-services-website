@@ -23,7 +23,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-background">
         {!videoLoaded && (
           <Image
-            src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+            src="/images/hero-poster.jpg"
             alt="HARPEX Showreel"
             fill
             priority
