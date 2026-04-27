@@ -9,14 +9,12 @@ declare global {
   }
 }
 
-const META_PIXEL_ID = '664352714303705'
-
 export function MetaPixel() {
   return (
     <>
       <Script
         id="meta-pixel"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
