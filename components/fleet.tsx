@@ -92,7 +92,6 @@ export function Fleet() {
               fill
               sizes="(max-width: 1024px) 100vw, 800px"
               className="object-contain"
-              priority
             />
           </div>
 
