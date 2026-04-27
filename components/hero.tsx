@@ -28,7 +28,7 @@ export function Hero() {
             fill
             priority
             className="object-cover"
-            unoptimized
+            sizes="100vw"
           />
         )}
         {videoLoaded && (
