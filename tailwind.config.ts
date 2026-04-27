@@ -68,8 +68,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        display: ['var(--font-space-grotesk)', 'sans-serif'],
+        sans: ['var(--font-dm-sans)', 'sans-serif'],
+        display: ['var(--font-dm-sans)', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

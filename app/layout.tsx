@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk, Bebas_Neue, DM_Sans, DM_Mono } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 
 import './globals.css'
 import { MetaPixel } from '@/components/meta-pixel'
 
-const _inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
-const _spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', display: 'swap' })
-const _bebasNeue = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-bebas', display: 'swap' })
-const _dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 'swap' })
-const _dmMono = DM_Mono({ weight: ['400', '500'], subsets: ['latin'], variable: '--font-dm-mono', display: 'swap' })
+const _dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+  preload: true,
+  weight: ['400', '500', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'HARPEX | Aerofilmagem & Serviços com Drones',
@@ -53,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark" data-scroll-behavior="smooth">
-      <body className={`${_inter.variable} ${_spaceGrotesk.variable} ${_bebasNeue.variable} ${_dmSans.variable} ${_dmMono.variable} font-sans antialiased grain-overlay`}>
+      <body className={`${_dmSans.variable} font-sans antialiased grain-overlay`}>
         <MetaPixel />
         {children}
       </body>
