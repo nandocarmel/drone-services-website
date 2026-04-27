@@ -9,14 +9,14 @@ declare global {
   }
 }
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1234567890'
+const META_PIXEL_ID = '664352714303705'
 
 export function MetaPixel() {
   return (
     <>
       <Script
         id="meta-pixel"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
@@ -27,7 +27,7 @@ export function MetaPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${META_PIXEL_ID}');
+            fbq('init', '664352714303705');
             fbq('track', 'PageView');
           `,
         }}
@@ -37,7 +37,7 @@ export function MetaPixel() {
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          src="https://www.facebook.com/tr?id=664352714303705&ev=PageView&noscript=1"
           alt=""
         />
       </noscript>
