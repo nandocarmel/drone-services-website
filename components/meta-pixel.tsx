@@ -1,6 +1,10 @@
-"use client"
+'use client'
 
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Script from 'next/script'
+
+const META_PIXEL_ID = '664352714303705'
 
 declare global {
   interface Window {
@@ -10,11 +14,20 @@ declare global {
 }
 
 export function MetaPixel() {
+  const pathname = usePathname()
+
+  useEffect(() => {
+    // Dispara PageView em cada navegação de rota
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'PageView')
+    }
+  }, [pathname])
+
   return (
     <>
       <Script
         id="meta-pixel"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
@@ -25,7 +38,7 @@ export function MetaPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '664352714303705');
+            fbq('init', '${META_PIXEL_ID}');
             fbq('track', 'PageView');
           `,
         }}
@@ -35,7 +48,7 @@ export function MetaPixel() {
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=664352714303705&ev=PageView&noscript=1"
+          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
           alt=""
         />
       </noscript>

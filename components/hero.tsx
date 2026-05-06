@@ -1,8 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown } from "lucide-react"
-import Image from "next/image"
+import { ArrowDown, Play } from "lucide-react"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -13,15 +12,18 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-[100svh] items-end justify-center overflow-hidden pb-24 md:items-center md:pb-0">
+      {/* YouTube Video Background */}
       <div className="absolute inset-0 bg-background">
-        <Image
-          src="/images/hero-bg.jpg"
-          alt="Drone HARPEX em voo ao pôr do sol"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        <iframe
+          src="https://www.youtube.com/embed/16kIY9pHC-4?si=rN7QGRCbz0MN9oWz&autoplay=1&mute=1&loop=1&playlist=16kIY9pHC-4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
+          title="HARPEX Showreel"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="pointer-events-none absolute left-1/2 top-1/2 aspect-video h-auto w-[300%] max-w-none -translate-x-1/2 -translate-y-[60%] border-0 md:w-[177.78vh] md:-translate-y-[55%]"
         />
+        {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/90 md:bg-background/60" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background to-transparent md:h-64" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background/60 to-transparent md:from-background/50" />

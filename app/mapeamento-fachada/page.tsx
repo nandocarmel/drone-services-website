@@ -206,7 +206,7 @@ export default function MapeamentoFachadaPage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
                 <Image
-                  src="/images/hero-mapeamento-3d.jpg"
+                  src="/images/hero-mapeamento-3d.png"
                   alt="Mapeamento 3D de Fachada com Drone"
                   width={500}
                   height={700}
@@ -258,7 +258,13 @@ export default function MapeamentoFachadaPage() {
                 <p className="font-sans text-[#8A8F9E] text-sm mb-6">
                   Em São Paulo, edifícios com mais de 5 pavimentos ou área construída superior a 750m² devem realizar inspeção periódica de fachadas conforme legislação municipal e NBR 16.747.
                 </p>
-
+                <div className="flex flex-wrap gap-3">
+                  {["Multas até R$ 50.000", "Responsabilidade do síndico", "NBR 16.747"].map((tag) => (
+                    <span key={tag} className="bg-[rgba(232,64,64,0.15)] text-[#E84040] font-sans text-xs px-3 py-1.5 rounded-full border border-[rgba(232,64,64,0.3)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -345,7 +351,7 @@ export default function MapeamentoFachadaPage() {
               </div>
               <div className="aspect-[3/4] relative">
                 <Image
-                  src="/images/inspecao-tradicional.jpg"
+                  src="/images/inspecao-tradicional.png"
                   alt="Inspeção tradicional de fachada com trabalhador em balancim - método com risco"
                   fill
                   sizes="600px"
@@ -360,7 +366,7 @@ export default function MapeamentoFachadaPage() {
               </div>
               <div className="aspect-[3/4] relative">
                 <Image
-                  src="/images/inspecao-drone.jpg"
+                  src="/images/inspecao-drone.png"
                   alt="Inspeção de fachada com drone - método seguro sem risco"
                   fill
                   sizes="600px"
@@ -430,7 +436,7 @@ export default function MapeamentoFachadaPage() {
                 </div>
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="/images/inspecao-tradicional.jpg"
+                    src="/images/inspecao-tradicional.png"
                     alt="Inspeção tradicional de fachada com trabalhador em balancim - método com risco"
                     fill
                     sizes="100vw"
@@ -467,7 +473,7 @@ export default function MapeamentoFachadaPage() {
                 </div>
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="/images/inspecao-drone.jpg"
+                    src="/images/inspecao-drone.png"
                     alt="Inspeção de fachada com drone - método seguro sem risco"
                     fill
                     sizes="100vw"
@@ -672,7 +678,7 @@ export default function MapeamentoFachadaPage() {
             <div className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/piloto-drone.jpg"
+                  src="/images/piloto-drone.png"
                   alt="Fernando Fonseca - Operador de Drone"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -695,7 +701,7 @@ export default function MapeamentoFachadaPage() {
             <div className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/engenheiro-tecnico.jpg"
+                  src="/images/engenheiro-tecnico.png"
                   alt="Otacílio Leôncio da Silva Jr. - Engenheiro Civil"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
