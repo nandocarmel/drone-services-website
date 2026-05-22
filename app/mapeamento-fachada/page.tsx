@@ -206,11 +206,11 @@ export default function MapeamentoFachadaPage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
                 <Image
-                  src="/images/hero-mapeamento-3d.png"
-                  alt="Mapeamento 3D de Fachada com Drone"
+                  src="/images/hero-edificio-mapeado.png"
+                  alt="Mapeamento 3D de Fachada com Drone - Edificio com marcadores de inspecao"
                   width={500}
                   height={700}
-                  className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-cover"
+                  className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-contain"
                   priority
                 />
               </div>
@@ -344,7 +344,7 @@ export default function MapeamentoFachadaPage() {
 
           {/* Desktop: Imagens comparativas lado a lado */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-12">
-            {/* Inspeção Tradicional */}
+            {/* Inspe��ão Tradicional */}
             <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
               <div className="absolute top-0 left-0 right-0 bg-[rgba(232,64,64,0.9)] py-3 px-4 z-10">
                 <p className="font-display font-bold text-lg text-white text-center">Inspeção tradicional com risco</p>
