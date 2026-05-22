@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const drones = [
   {
     name: "DJI Mavic 4 Pro Creator",
-    image: "/images/fleet-mavic4.jpg",
+    image: "/images/fleet-mavic4.png",
     specs: [
       "Sensor Hasselblad 4/3 CMOS",
       "Video 8K/30fps e 4K/120fps",
@@ -17,7 +17,7 @@ const drones = [
   },
   {
     name: "DJI Matrice 4T Thermal",
-    image: "/images/fleet-matrice4t.jpg",
+    image: "/images/fleet-matrice4t.png",
     specs: [
       "Camera termica + visual + zoom",
       "Resolucao termica 640x512px",
@@ -27,7 +27,7 @@ const drones = [
   },
   {
     name: "DJI Avata 2 FPV",
-    image: "/images/fleet-avata2.jpg",
+    image: "/images/fleet-avata2.png",
     specs: [
       "Sensor 1/1.3\" CMOS",
       "Video 4K/60fps estabilizado",
@@ -37,7 +37,7 @@ const drones = [
   },
   {
     name: "DJI Mini 5 Pro",
-    image: "/images/fleet-mini5pro.jpg",
+    image: "/images/fleet-mini5pro.png",
     specs: [
       "Sensor 1\" CMOS",
       "Video 4K/60fps HDR",
@@ -92,6 +92,7 @@ export function Fleet() {
               fill
               sizes="(max-width: 1024px) 100vw, 800px"
               className="object-contain"
+              priority
             />
           </div>
 

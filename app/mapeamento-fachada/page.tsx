@@ -201,17 +201,15 @@ export default function MapeamentoFachadaPage() {
             </div>
 
             {/* Coluna da imagem */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
-                <Image
-                  src="/images/hero-mapeamento-3d.jpg"
-                  alt="Mapeamento 3D de Fachada com Drone"
-                  width={500}
-                  height={700}
-                  className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-cover"
-                  priority
-                />
-              </div>
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <Image
+                src="/images/hero-edificio-mapeado.png"
+                alt="Mapeamento 3D de Fachada com Drone - Edificio com marcadores de inspecao"
+                width={600}
+                height={800}
+                className="w-auto h-[400px] md:h-[550px] lg:h-[700px] xl:h-[750px] object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -256,7 +254,13 @@ export default function MapeamentoFachadaPage() {
                 <p className="font-sans text-[#8A8F9E] text-sm mb-6">
                   Em São Paulo, edifícios com mais de 5 pavimentos ou área construída superior a 750m² devem realizar inspeção periódica de fachadas conforme legislação municipal e NBR 16.747.
                 </p>
-
+                <div className="flex flex-wrap gap-3">
+                  {["Multas até R$ 50.000", "Responsabilidade do síndico", "NBR 16.747"].map((tag) => (
+                    <span key={tag} className="bg-[rgba(232,64,64,0.15)] text-[#E84040] font-sans text-xs px-3 py-1.5 rounded-full border border-[rgba(232,64,64,0.3)]">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -336,14 +340,14 @@ export default function MapeamentoFachadaPage() {
 
           {/* Desktop: Imagens comparativas lado a lado */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-12">
-            {/* Inspeção Tradicional */}
+            {/* Inspe��ão Tradicional */}
             <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
               <div className="absolute top-0 left-0 right-0 bg-[rgba(232,64,64,0.9)] py-3 px-4 z-10">
                 <p className="font-display font-bold text-lg text-white text-center">Inspeção tradicional com risco</p>
               </div>
               <div className="aspect-[3/4] relative">
                 <Image
-                  src="/images/inspecao-tradicional.jpg"
+                  src="/images/inspecao-tradicional.png"
                   alt="Inspeção tradicional de fachada com trabalhador em balancim - método com risco"
                   fill
                   sizes="600px"
@@ -358,7 +362,7 @@ export default function MapeamentoFachadaPage() {
               </div>
               <div className="aspect-[3/4] relative">
                 <Image
-                  src="/images/inspecao-drone.jpg"
+                  src="/images/inspecao-drone.png"
                   alt="Inspeção de fachada com drone - método seguro sem risco"
                   fill
                   sizes="600px"
@@ -428,7 +432,7 @@ export default function MapeamentoFachadaPage() {
                 </div>
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="/images/inspecao-tradicional.jpg"
+                    src="/images/inspecao-tradicional.png"
                     alt="Inspeção tradicional de fachada com trabalhador em balancim - método com risco"
                     fill
                     sizes="100vw"
@@ -465,7 +469,7 @@ export default function MapeamentoFachadaPage() {
                 </div>
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="/images/inspecao-drone.jpg"
+                    src="/images/inspecao-drone.png"
                     alt="Inspeção de fachada com drone - método seguro sem risco"
                     fill
                     sizes="100vw"
@@ -670,7 +674,7 @@ export default function MapeamentoFachadaPage() {
             <div className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/piloto-drone.jpg"
+                  src="/images/piloto-drone.png"
                   alt="Fernando Fonseca - Operador de Drone"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -693,7 +697,7 @@ export default function MapeamentoFachadaPage() {
             <div className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/engenheiro-tecnico.jpg"
+                  src="/images/engenheiro-tecnico.png"
                   alt="Otacílio Leôncio da Silva Jr. - Engenheiro Civil"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
