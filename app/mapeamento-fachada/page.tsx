@@ -157,7 +157,9 @@ export default function MapeamentoFachadaPage() {
 
               {/* Subtítulo */}
               <p className="font-sans text-lg md:text-xl text-[#8A8F9E] mb-8 leading-relaxed">
-               Sua fachada pode esconder riscos invisíveis. Com drones de alta precisão, realizamos a inspeção da estrutura sem andaimes, com mais segurança e eficiência. Relatório técnico com ART, aceito por engenheiros, síndicos e prefeitura.
+                Mapeamos cada centímetro da sua fachada com drone profissional,
+                entregamos modelo 3D interativo e laudo técnico com ART - em até 7 dias úteis.
+                Seguro, preciso e aceito por engenheiros, síndicos e prefeitura.
               </p>
 
               {/* Pills de benefícios */}
@@ -212,6 +214,35 @@ export default function MapeamentoFachadaPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* VISUALIZADOR 3D INTERATIVO */}
+      <section className="bg-[#0D1018] py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="text-center mb-8">
+            <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#F0EDE8] mb-3">
+              Explore um modelo 3D real
+            </h2>
+            <p className="font-sans text-[#8A8F9E] text-sm md:text-base max-w-2xl mx-auto">
+              Navegue pelo mapeamento 3D de uma fachada real. Gire, aproxime e veja os detalhes que nosso drone captura.
+            </p>
+          </div>
+          <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)] bg-[#131720]">
+            <div className="w-full h-[400px] md:h-[500px] lg:h-[600px]">
+              <iframe
+                src="https://platform.myxrobotics.com/twins/61164?invcode=Vv0PPibS"
+                title="Visualizador 3D de Fachada - Harpex"
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; xr-spatial-tracking; fullscreen"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p className="text-center font-sans text-xs text-[#8A8F9E] mt-4">
+            Use o mouse ou toque para girar e explorar o modelo 3D
+          </p>
         </div>
       </section>
 
