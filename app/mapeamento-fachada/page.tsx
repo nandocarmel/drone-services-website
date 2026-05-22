@@ -157,9 +157,7 @@ export default function MapeamentoFachadaPage() {
 
               {/* Subtítulo */}
               <p className="font-sans text-lg md:text-xl text-[#8A8F9E] mb-8 leading-relaxed">
-                Mapeamos cada centímetro da sua fachada com drone profissional,
-                entregamos modelo 3D interativo e laudo técnico com ART - em até 7 dias úteis.
-                Seguro, preciso e aceito por engenheiros, síndicos e prefeitura.
+               Sua fachada pode esconder riscos invisíveis. Com drones de alta precisão, realizamos a inspeção da estrutura sem andaimes, com mais segurança e eficiência. Relatório técnico com ART, aceito por engenheiros, síndicos e prefeitura.
               </p>
 
               {/* Pills de benefícios */}
