@@ -203,17 +203,15 @@ export default function MapeamentoFachadaPage() {
             </div>
 
             {/* Coluna da imagem */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
-                <Image
-                  src="/images/hero-edificio-mapeado.png"
-                  alt="Mapeamento 3D de Fachada com Drone - Edificio com marcadores de inspecao"
-                  width={500}
-                  height={700}
-                  className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-contain"
-                  priority
-                />
-              </div>
+            <div className="relative flex items-center justify-center">
+              <Image
+                src="/images/hero-edificio-mapeado.png"
+                alt="Mapeamento 3D de Fachada com Drone - Edificio com marcadores de inspecao"
+                width={400}
+                height={600}
+                className="w-auto h-[350px] md:h-[450px] lg:h-[550px] object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
