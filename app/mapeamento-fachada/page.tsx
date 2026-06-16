@@ -151,8 +151,7 @@ export default function MapeamentoFachadaPage() {
 
               {/* Título H1 */}
               <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-6">
-                Sua fachada vista em <span className="text-[#C8A84B]">3D</span>.<br />
-                Sem andaime.
+                Vistoria Predial <span className="text-[#C8A84B]">com Drone</span>.<br />
               </h1>
 
               {/* Subtítulo */}
