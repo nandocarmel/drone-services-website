@@ -499,6 +499,11 @@
     .client-strip,.steps,.invest-grid,.timeline,.equip,.cta-block{grid-template-columns:1fr;}
     .invest .amount{font-size:42px;}
     .tl-step:not(:last-child)::after{display:none;}
+    /* timeline vertical: ponto à esquerda, alinhado ao texto */
+    .timeline{gap:18px;}
+    .tl-step{padding:0;display:flex;align-items:center;gap:14px;}
+    .tl-dot{margin-bottom:0;flex-shrink:0;}
+    .tl-text{flex:1;min-width:0;}
     .footer{flex-direction:column;align-items:flex-start;}
     .footer .fbrand{text-align:left;}
   }
@@ -770,18 +775,24 @@
       <div class="timeline">
         <div class="tl-step">
           <div class="tl-dot"><span></span></div>
-          <div class="when">2 dias</div>
-          <div class="what">Captação de imagens em campo</div>
+          <div class="tl-text">
+            <div class="when">2 dias</div>
+            <div class="what">Captação de imagens em campo</div>
+          </div>
         </div>
         <div class="tl-step">
           <div class="tl-dot"><span></span></div>
-          <div class="when">2 dias</div>
-          <div class="what">Processamento e renderização 3D</div>
+          <div class="tl-text">
+            <div class="when">2 dias</div>
+            <div class="what">Processamento e renderização 3D</div>
+          </div>
         </div>
         <div class="tl-step">
           <div class="tl-dot"><span></span></div>
-          <div class="when">Em até 15 dias úteis</div>
-          <div class="what">Inspeção e entrega do laudo pela engenharia</div>
+          <div class="tl-text">
+            <div class="when">Em até 15 dias úteis</div>
+            <div class="what">Inspeção e entrega do laudo pela engenharia</div>
+          </div>
         </div>
       </div>
     </section>
