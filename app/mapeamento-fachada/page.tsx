@@ -73,6 +73,12 @@ export default function MapeamentoFachadaPage() {
               O que é o Mapeamento 3D?
             </a>
             <a
+              href="#termografia"
+              className="font-sans text-sm text-[#8A8F9E] hover:text-[#C8A84B] transition-colors"
+            >
+              Termografia
+            </a>
+            <a
               href="#como-funciona"
               className="font-sans text-sm text-[#8A8F9E] hover:text-[#C8A84B] transition-colors"
             >
@@ -121,6 +127,13 @@ export default function MapeamentoFachadaPage() {
                 className="font-sans text-base text-[#F0EDE8] hover:text-[#C8A84B] transition-colors py-2"
               >
                 O que é o Mapeamento 3D?
+              </a>
+              <a
+                href="#termografia"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-sans text-base text-[#F0EDE8] hover:text-[#C8A84B] transition-colors py-2"
+              >
+                Termografia
               </a>
               <a
                 href="#como-funciona"
@@ -650,6 +663,56 @@ export default function MapeamentoFachadaPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6.5 TERMOGRAFIA COM DRONE */}
+      <section id="termografia" className="bg-[#0D1018] py-20 scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Imagem termográfica */}
+            <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+              <Image
+                src="/images/termografia-fachada.png"
+                alt="Imagem termográfica de fachada capturada por drone, mostrando anomalias térmicas em mapa de calor"
+                width={640}
+                height={520}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            {/* Conteúdo */}
+            <div>
+              <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight text-balance mb-5">
+                <span className="text-[#C8A84B]">Termografia com Drone:</span> Inspeções Inteligentes para
+                Diagnósticos Precisos
+              </h2>
+              <p className="font-sans text-[#8A8F9E] text-base leading-relaxed mb-8">
+                Identifique falhas invisíveis a olho nu com rapidez, segurança e alta precisão, reduzindo custos,
+                minimizando riscos e tomando decisões com base em dados técnicos confiáveis.
+              </p>
+
+              <h3 className="font-display font-bold text-lg text-[#F0EDE8] mb-4">Vantagens da Termografia com Drone</h3>
+              <ul className="space-y-3">
+                {[
+                  "Detecta anomalias invisíveis a olho nu.",
+                  "Localiza início de desplacamento de pastilhas.",
+                  "Localiza aquecimento anormal em instalações elétricas.",
+                  "Elimina a necessidade de acesso físico a áreas de risco.",
+                  "Reduz custos operacionais e tempo de inspeção.",
+                  "Não interfere na rotina do edifício ou da operação.",
+                  "Gera registros térmicos de alta qualidade para laudos técnicos.",
+                  "Permite ações preventivas antes que ocorram falhas de maior impacto.",
+                  "Aumenta a segurança da equipe, dispensando trabalhos em altura na maioria das inspeções.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 font-sans text-sm text-[#C4C7D0] leading-relaxed">
+                    <Check className="h-4 w-4 text-[#C8A84B] flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
