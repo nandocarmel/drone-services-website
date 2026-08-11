@@ -703,10 +703,10 @@ export default function MapeamentoFachadaPage() {
           {/* Imagem do software de reconstrução 3D */}
           <div className="mb-12 rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
             <Image
-              src="/images/fachada-3d.jpg"
-              alt="Software DroneDeploy mostrando reconstrução 3D de fachada com análise de desvio de superfície e mapa de calor"
-              width={1400}
-              height={800}
+              src="/images/mapeamento-3d-plataforma.webp"
+              alt="Plataforma de mapeamento 3D exibindo modelo interativo da fachada norte com marcadores de anotações e painel de camadas"
+              width={1600}
+              height={859}
               className="w-full h-auto"
             />
           </div>
