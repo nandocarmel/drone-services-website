@@ -361,15 +361,32 @@ export default function MapeamentoFachadaPage() {
       <section id="termografia" className="bg-[#0D1018] py-20 scroll-mt-24">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Imagem termográfica */}
-            <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
-              <Image
-                src="/images/termografia-fachada.png"
-                alt="Imagem termográfica de fachada capturada por drone, mostrando anomalias térmicas em mapa de calor"
-                width={640}
-                height={520}
-                className="w-full h-auto object-cover"
-              />
+            {/* Imagens: foto real + termografia */}
+            <div className="grid grid-cols-2 gap-4">
+              <figure className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+                <Image
+                  src="/images/termografia-rgb.jpg"
+                  alt="Foto real da fachada capturada por drone DJI M4T, mostrando parede de pastilhas cerâmicas entre janelas"
+                  width={640}
+                  height={480}
+                  className="w-full h-56 md:h-72 object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-[#F0EDE8] font-sans text-xs font-medium px-3 py-1.5 text-center">
+                  Foto real (RGB)
+                </figcaption>
+              </figure>
+              <figure className="relative rounded-xl overflow-hidden border border-[#C8A84B]/40">
+                <Image
+                  src="/images/termografia-termica.jpeg"
+                  alt="Imagem termográfica da mesma fachada, mostrando anomalias térmicas e infiltração em mapa de calor"
+                  width={640}
+                  height={480}
+                  className="w-full h-56 md:h-72 object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-[#C8A84B] text-black font-sans text-xs font-semibold px-3 py-1.5 text-center">
+                  Termografia
+                </figcaption>
+              </figure>
             </div>
 
             {/* Conteúdo */}
