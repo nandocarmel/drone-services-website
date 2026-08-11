@@ -295,29 +295,6 @@ export default function MapeamentoFachadaPage() {
             </div>
           </div>
 
-          {/* Grid 2x2 */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { title: "Riscos para quem não faz", content: "Multas pesadas, processos judiciais, responsabilidade civil e criminal em caso de acidentes.", isRed: true },
-              { title: "O que a lei exige", content: "Laudo técnico com ART ou RRT, seguindo a NBR 16.747 para inspeção de edificações.", isRed: false },
-              { title: "Responsabilidade do síndico", content: "O síndico responde civil e criminalmente por omissão na manutenção predial.", isRed: true },
-              { title: "São Paulo exige há anos", content: "A fiscalização está cada vez mais rigorosa. Não espere ser notificado.", isRed: false },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className={`p-6 rounded-xl border ${card.isRed
-                  ? "bg-[rgba(232,64,64,0.08)] border-[rgba(232,64,64,0.2)]"
-                  : "bg-[#1A2030] border-[rgba(255,255,255,0.08)]"
-                  }`}
-              >
-                <h3 className={`font-display font-bold text-2xl mb-3 ${card.isRed ? "text-[#E84040]" : "text-[#F0EDE8]"}`}>
-                  {card.title}
-                </h3>
-                <p className="font-sans text-[#8A8F9E] text-sm leading-relaxed">{card.content}</p>
-              </div>
-            ))}
-          </div>
-
           {/* Alerta Síndico */}
           <div className="mt-12 bg-[rgba(200,168,75,0.08)] border border-[rgba(200,168,75,0.25)] rounded-2xl p-8 md:p-10">
             <div className="flex flex-col md:flex-row gap-8 items-center">
