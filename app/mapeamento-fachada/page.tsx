@@ -167,7 +167,7 @@ export default function MapeamentoFachadaPage() {
                   "Sem andaime ou rapel",
                   "Precisão milimétrica",
                   "Laudo técnico com ART",
-                  "Entrega em 7 dias úteis",
+                  "Entrega em até 15 dias",
                 ].map((benefit) => (
                   <span
                     key={benefit}
@@ -432,7 +432,7 @@ export default function MapeamentoFachadaPage() {
               <ul className="space-y-4">
                 {[
                   "Mais econômico que o método tradicional",
-                  "Entrega do laudo em até 7 dias úteis",
+                  "Entrega do laudo em até 15 dias",
                   "Zero risco - operação 100% remota",
                   "100% da fachada mapeada, sem exceção",
                   "Limpo, silencioso, sem transtorno para moradores",
@@ -513,7 +513,7 @@ export default function MapeamentoFachadaPage() {
                 <ul className="space-y-3">
                   {[
                     "Mais econômico que o método tradicional",
-                    "Entrega do laudo em até 7 dias úteis",
+                    "Entrega do laudo em até 15 dias",
                     "Zero risco - operação 100% remota",
                     "100% da fachada mapeada, sem exceção",
                     "Limpo, silencioso, sem transtorno para moradores",
@@ -597,7 +597,7 @@ export default function MapeamentoFachadaPage() {
               <tbody className="font-sans text-xs md:text-sm">
                 {[
                   { criterio: "Segurança", trad: "Alto risco de acidentes", harpex: "Zero risco - 100% remoto" },
-                  { criterio: "Prazo", trad: "1 a 3 semanas", harpex: "Captura em horas + laudo em 7 dias" },
+                  { criterio: "Prazo", trad: "1 a 3 semanas", harpex: "Captura em horas + laudo em até 15 dias" },
                   { criterio: "Custo", trad: "R$ 15.000 a R$ 40.000+", harpex: "Método mais econômico e preciso" },
                   { criterio: "Cobertura", trad: "Parcial - limitada", harpex: "100% da fachada mapeada" },
                   { criterio: "Precisão", trad: "Subjetiva - depende do inspetor", harpex: "Milimétrica - gerada por software" },
@@ -675,7 +675,7 @@ export default function MapeamentoFachadaPage() {
               "Relatório com marcações de patologias",
               "Medidas e coordenadas",
               "Suporte na Apresentação",
-              "Laudo em até 7 dias úteis",
+                  "Laudo em até 15 dias",
             ].map((item) => (
               <div key={item} className="bg-[#131720] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[rgba(200,168,75,0.15)] border border-[#C8A84B] flex items-center justify-center">
@@ -784,7 +784,7 @@ export default function MapeamentoFachadaPage() {
             {[
               { q: "A inspeção de fachada é realmente obrigatória em São Paulo?", a: "Sim. A legislação municipal de São Paulo, aliada à NBR 16.747, exige inspeção periódica de fachadas em prédios com mais de 5 pavimentos ou área construída superior a 750m². O não cumprimento pode gerar multas de até R$ 50.000 e responsabilidade civil e criminal do síndico." },
               { q: "O laudo da Harpex é aceito pela prefeitura, CREA e engenheiros?", a: "Sim. Nosso laudo técnico inclui ART (Anotação de Responsabilidade Técnica) assinada por engenheiro credenciado no CREA-SP, atendendo todas as exigências legais." },
-              { q: "Quanto tempo leva o processo completo?", a: "A captura com drone leva de 2 a 6 horas, dependendo do tamanho do edifício. O processamento e elaboração do laudo técnico são entregues em até 7 dias úteis." },
+              { q: "Quanto tempo leva o processo completo?", a: "A captura com drone leva de 2 a 6 horas, dependendo do tamanho do edifício. O processamento e elaboração do laudo técnico são entregues em até 15 dias." },
               { q: "O mapeamento é seguro para os moradores?", a: "Sim, 100% seguro. A operação é totalmente remota, sem contato físico com o edifício. Nossos pilotos são certificados pela ANAC e seguimos todos os protocolos de segurança." },
               { q: "Qual o custo em comparação ao método tradicional?", a: "O mapeamento 3D com drone pode ser até 70% mais econômico que métodos tradicionais com andaime ou rapel. Solicite um orçamento personalizado para sua edificação." },
               { q: "O relatório serve para apresentar na assembleia?", a: "Sim. O modelo 3D interativo facilita muito a apresentação aos condôminos, permitindo visualizar claramente os pontos que necessitam de manutenção e justificando os investimentos necessários." },
