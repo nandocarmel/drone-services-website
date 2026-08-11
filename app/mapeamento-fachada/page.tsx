@@ -245,6 +245,105 @@ export default function MapeamentoFachadaPage() {
         </div>
       </section>
 
+      {/* CLASSIFICAÇÃO DE ANOMALIAS */}
+      <section className="relative bg-[#0D1018] py-16 md:py-24 overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+            {/* Coluna esquerda: edifício mapeado */}
+            <div className="relative flex flex-col items-center">
+              <Image
+                src="/images/hero-edificio-mapeado.png"
+                alt="Edifício mapeado em 3D com pontos de anomalias georreferenciados"
+                width={420}
+                height={560}
+                className="w-auto h-[340px] md:h-[440px] object-contain drop-shadow-2xl"
+              />
+              <p className="mt-4 font-sans text-xs text-[#8A8F9E] italic text-center">
+                *Mapeamento 3D real de cliente Harpex
+              </p>
+
+              {/* Seta decorativa (desktop) */}
+              <svg
+                className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 z-10"
+                width="130"
+                height="90"
+                viewBox="0 0 130 90"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 78 C 40 78, 60 40, 110 28"
+                  stroke="#C8A84B"
+                  strokeWidth="9"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <path d="M92 12 L122 24 L98 44 Z" fill="#C8A84B" />
+              </svg>
+            </div>
+
+            {/* Coluna direita: conteúdo */}
+            <div>
+              <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#F0EDE8] leading-tight text-balance mb-5">
+                Cada anomalia localizada é classificada e documentada no laudo técnico seguindo a norma{" "}
+                <span className="text-[#C8A84B]">ABNT NBR 16747</span>.
+              </h2>
+              <p className="font-sans text-[#8A8F9E] text-sm md:text-base leading-relaxed mb-6">
+                As anomalias da fachada viram um ponto georreferenciado no modelo, com tipo e nível de gravidade — o
+                síndico enxerga exatamente onde está cada problema e o que ele representa.
+              </p>
+
+              {/* Badges */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Índice de Gravidade", "Pontos Georreferenciados", "Registro Detalhado"].map((badge) => (
+                  <span
+                    key={badge}
+                    className="border border-[#C8A84B]/40 text-[#C8A84B] px-4 py-2 rounded-lg font-sans text-sm font-medium"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
+              {/* Detalhe da anomalia com card sobreposto */}
+              <div className="relative rounded-xl overflow-hidden border-2 border-[#C8A84B] bg-[#131720]">
+                <Image
+                  src="/images/detalhe-anomalia-fachada.png"
+                  alt="Detalhe ampliado de anomalia identificada na fachada"
+                  width={640}
+                  height={400}
+                  className="w-full h-[260px] md:h-[300px] object-cover"
+                />
+                {/* Bounding box da anomalia */}
+                <div className="absolute inset-4 border-2 border-[#C8A84B] rounded pointer-events-none" />
+
+                {/* Card de classificação */}
+                <div className="absolute top-3 right-3 w-40 md:w-48 bg-white rounded-lg shadow-2xl p-3 font-sans">
+                  <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2">
+                    <span className="text-[10px] font-bold text-gray-900">P08 · Fissura</span>
+                    <span className="text-[9px] text-gray-400">NBR 16747</span>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Tipo</span>
+                      <span className="text-[9px] font-semibold text-gray-800">Revestimento</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Gravidade</span>
+                      <span className="text-[9px] font-bold text-white bg-[#E8A33D] px-1.5 py-0.5 rounded">Média</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Localização</span>
+                      <span className="text-[9px] font-semibold text-gray-800">17º pav.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. TICKER ANIMADO */}
       <div className="bg-[#C8A84B] py-3 overflow-hidden">
         <div className="animate-ticker whitespace-nowrap">
