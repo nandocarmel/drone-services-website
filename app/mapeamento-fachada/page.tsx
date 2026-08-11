@@ -229,6 +229,52 @@ export default function MapeamentoFachadaPage() {
         </div>
       </section>
 
+      {/* 6. O QUE É O MAPEAMENTO 3D */}
+      <section id="mapeamento-3d" className="bg-[#131720] py-20 scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-6">
+            O que é a inspeção por mapeamento 3D da Fachada?
+          </h2>
+          <p className="font-sans text-[#8A8F9E] text-center max-w-3xl mx-auto mb-12">
+            Utilizamos drones profissionais para capturar centenas de fotos de alta resolução.
+            Essas imagens são processadas por software de fotogrametria, gerando um modelo 3D
+            navegável da fachada com precisão milimétrica.
+          </p>
+
+          {/* Imagem do software de reconstrução 3D */}
+          <div className="mb-12 rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+            <Image
+              src="/images/mapeamento-3d-plataforma.webp"
+              alt="Plataforma de mapeamento 3D exibindo modelo interativo da fachada norte com marcadores de anotações e painel de camadas"
+              width={1600}
+              height={859}
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { num: "01", title: "Modelo 3D Navegável", desc: "Visualize toda a fachada em um ambiente 3D interativo, com zoom e rotação." },
+              { num: "02", title: "Relatório Técnico com ART", desc: "Laudo completo assinado por engenheiro credenciado no CREA-SP." },
+              { num: "03", title: "Rastreabilidade Total", desc: "Cada imagem possui data, hora e coordenadas GPS precisas." },
+              { num: "04", title: "Medições Automáticas", desc: "Calcule distâncias, áreas e volumes diretamente no modelo 3D." },
+              { num: "05", title: "Marcação de Patologias", desc: "Trincas, infiltrações e descolamentos identificados." },
+              { num: "06", title: "Nuvem de Pontos 3D", desc: "Dados precisos para análises técnicas avançadas e projetos." },
+            ].map((item) => (
+              <div key={item.num} className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 relative overflow-hidden">
+                <span className="absolute -top-4 -right-2 font-display font-bold text-8xl text-[rgba(200,168,75,0.1)]">
+                  {item.num}
+                </span>
+                <div className="relative z-10">
+                  <h3 className="font-display font-bold text-xl text-[#C8A84B] mb-2">{item.title}</h3>
+                  <p className="font-sans text-[#8A8F9E] text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* VISUALIZADOR 3D INTERATIVO */}
       <section className="bg-[#0D1018] py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
@@ -684,52 +730,6 @@ export default function MapeamentoFachadaPage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. O QUE É O MAPEAMENTO 3D */}
-      <section id="mapeamento-3d" className="bg-[#131720] py-20 scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-6">
-            O que é a inspeção por mapeamento 3D da Fachada?
-          </h2>
-          <p className="font-sans text-[#8A8F9E] text-center max-w-3xl mx-auto mb-12">
-            Utilizamos drones profissionais para capturar centenas de fotos de alta resolução.
-            Essas imagens são processadas por software de fotogrametria, gerando um modelo 3D
-            navegável da fachada com precisão milimétrica.
-          </p>
-
-          {/* Imagem do software de reconstrução 3D */}
-          <div className="mb-12 rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
-            <Image
-              src="/images/mapeamento-3d-plataforma.webp"
-              alt="Plataforma de mapeamento 3D exibindo modelo interativo da fachada norte com marcadores de anotações e painel de camadas"
-              width={1600}
-              height={859}
-              className="w-full h-auto"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { num: "01", title: "Modelo 3D Navegável", desc: "Visualize toda a fachada em um ambiente 3D interativo, com zoom e rotação." },
-              { num: "02", title: "Relatório Técnico com ART", desc: "Laudo completo assinado por engenheiro credenciado no CREA-SP." },
-              { num: "03", title: "Rastreabilidade Total", desc: "Cada imagem possui data, hora e coordenadas GPS precisas." },
-              { num: "04", title: "Medições Automáticas", desc: "Calcule distâncias, áreas e volumes diretamente no modelo 3D." },
-              { num: "05", title: "Marcação de Patologias", desc: "Trincas, infiltrações e descolamentos identificados." },
-              { num: "06", title: "Nuvem de Pontos 3D", desc: "Dados precisos para análises técnicas avançadas e projetos." },
-            ].map((item) => (
-              <div key={item.num} className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 relative overflow-hidden">
-                <span className="absolute -top-4 -right-2 font-display font-bold text-8xl text-[rgba(200,168,75,0.1)]">
-                  {item.num}
-                </span>
-                <div className="relative z-10">
-                  <h3 className="font-display font-bold text-xl text-[#C8A84B] mb-2">{item.title}</h3>
-                  <p className="font-sans text-[#8A8F9E] text-sm">{item.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
