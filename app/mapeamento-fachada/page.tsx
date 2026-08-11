@@ -230,7 +230,7 @@ export default function MapeamentoFachadaPage() {
           <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)] bg-[#131720]">
             <div className="w-full h-[400px] md:h-[500px] lg:h-[600px]">
               <iframe
-                src="https://platform.myxrobotics.com/twins/61164?invcode=Vv0PPibS"
+                src="https://app.one3d.ai/twins/61612?invcode=IUMeuTIj"
                 title="Visualizador 3D de Fachada - Harpex"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; xr-spatial-tracking; fullscreen"
