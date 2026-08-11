@@ -369,7 +369,7 @@ export default function MapeamentoFachadaPage() {
                   alt="Foto real da fachada capturada por drone DJI M4T, mostrando parede de pastilhas cerâmicas entre janelas"
                   width={640}
                   height={480}
-                  className="w-full h-56 md:h-72 object-cover"
+                  className="w-full h-72 md:h-[420px] object-cover"
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-[#F0EDE8] font-sans text-xs font-medium px-3 py-1.5 text-center">
                   Foto real (RGB)
@@ -381,7 +381,7 @@ export default function MapeamentoFachadaPage() {
                   alt="Imagem termográfica da mesma fachada, mostrando anomalias térmicas e infiltração em mapa de calor"
                   width={640}
                   height={480}
-                  className="w-full h-56 md:h-72 object-cover"
+                  className="w-full h-72 md:h-[420px] object-cover"
                 />
                 <figcaption className="absolute bottom-0 left-0 right-0 bg-[#C8A84B] text-black font-sans text-xs font-semibold px-3 py-1.5 text-center">
                   Termografia
