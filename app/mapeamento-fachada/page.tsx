@@ -332,7 +332,7 @@ export default function MapeamentoFachadaPage() {
                     "Risco de queda de revestimentos",
                     "Responsabilização judicial do síndico",
                     "Custos até 3x maiores sem prevenção",
-                    "Desvalorização e insatisfação dos moradores",
+                    "Desvaloriza��ão e insatisfação dos moradores",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 font-sans text-[#F0EDE8]">
                       <Check className="h-5 w-5 text-[#22C55E] flex-shrink-0 mt-0.5" />
@@ -364,10 +364,6 @@ export default function MapeamentoFachadaPage() {
       {/* 5. PROBLEMA vs SOLUÇÃO */}
       <section className="bg-[#080A0E] py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-12">
-            O método antigo é <span className="text-[#8A8F9E]">ineficiente</span>.
-          </h2>
-
           {/* Desktop: Imagens comparativas lado a lado */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-12">
             {/* Inspe��ão Tradicional */}
