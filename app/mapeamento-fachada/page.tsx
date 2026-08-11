@@ -151,7 +151,7 @@ export default function MapeamentoFachadaPage() {
 
               {/* Título H1 */}
               <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-6">
-                Inspeção de Fachada <span className="text-[#C8A84B]">com Drone</span>.<br />
+                Inspeção de Fachada <span className="text-[#C8A84B]">com Drone e Termografia</span>.<br />
               </h1>
 
               {/* Subtítulo */}
@@ -332,7 +332,7 @@ export default function MapeamentoFachadaPage() {
                     "Risco de queda de revestimentos",
                     "Responsabilização judicial do síndico",
                     "Custos até 3x maiores sem prevenção",
-                    "Desvaloriza��ão e insatisfação dos moradores",
+                    "Desvaloriza����ão e insatisfação dos moradores",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 font-sans text-[#F0EDE8]">
                       <Check className="h-5 w-5 text-[#22C55E] flex-shrink-0 mt-0.5" />
