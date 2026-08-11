@@ -375,8 +375,8 @@ export default function MapeamentoFachadaPage() {
             {/* Conteúdo */}
             <div>
               <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight text-balance mb-5">
-                <span className="text-[#C8A84B]">Termografia com Drone:</span> Inspeções Inteligentes para
-                Diagnósticos Precisos
+                <span className="text-[#C8A84B]">Termografia com Drone:</span> Descubra os desplacamentos antes da
+                queda
               </h2>
               <p className="font-sans text-[#8A8F9E] text-base leading-relaxed mb-8">
                 Identifique falhas invisíveis a olho nu com rapidez, segurança e alta precisão, reduzindo custos,
