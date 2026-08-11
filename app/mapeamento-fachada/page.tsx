@@ -309,7 +309,7 @@ export default function MapeamentoFachadaPage() {
                     "Risco de queda de revestimentos",
                     "Responsabilização judicial do síndico",
                     "Custos até 3x maiores sem prevenção",
-                    "Desvaloriza����ão e insatisfação dos moradores",
+                    "Desvalorização e insatisfação dos moradores",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 font-sans text-[#F0EDE8]">
                       <Check className="h-5 w-5 text-[#22C55E] flex-shrink-0 mt-0.5" />
