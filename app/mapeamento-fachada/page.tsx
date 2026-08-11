@@ -492,7 +492,7 @@ export default function MapeamentoFachadaPage() {
                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="60" cy="60" r="55" stroke="#E84040" strokeWidth="6" fill="none" />
                   <line x1="25" y1="95" x2="95" y2="25" stroke="#F0EDE8" strokeWidth="6" />
-                  <text x="60" y="30" textAnchor="middle" fill="#E84040" fontSize="10" fontFamily="DM Mono" fontWeight="bold">AGORA É LEI</text>
+                  <text x="60" y="30" textAnchor="middle" fill="#E84040" fontSize="10" fontFamily="DM Mono" fontWeight="bold">AGORA �� LEI</text>
                 </svg>
               </div>
               {/* Conteúdo */}
@@ -730,45 +730,6 @@ export default function MapeamentoFachadaPage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. TABELA COMPARATIVA */}
-      <section className="bg-[#080A0E] py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-12">
-            Veja a diferença lado a lado.
-          </h2>
-
-          <div className="w-full">
-            <table className="w-full border-collapse table-fixed">
-              <thead>
-                <tr className="border-b border-[rgba(255,255,255,0.15)]">
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 w-[22%] md:w-auto">Critério</th>
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 text-[#8A8F9E] w-[39%] md:w-auto">Método Tradicional</th>
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 text-[#C8A84B] w-[39%] md:w-auto">Harpex - Mapeamento 3D</th>
-                </tr>
-              </thead>
-              <tbody className="font-sans text-xs md:text-sm">
-                {[
-                  { criterio: "Segurança", trad: "Alto risco de acidentes", harpex: "Zero risco - 100% remoto" },
-                  { criterio: "Prazo", trad: "1 a 3 semanas", harpex: "Captura em horas + laudo em até 15 dias" },
-                  { criterio: "Custo", trad: "R$ 15.000 a R$ 40.000+", harpex: "Método mais econômico e preciso" },
-                  { criterio: "Cobertura", trad: "Parcial - limitada", harpex: "100% da fachada mapeada" },
-                  { criterio: "Precisão", trad: "Subjetiva - depende do inspetor", harpex: "Milimétrica - gerada por software" },
-                  { criterio: "Transtorno", trad: "Barulho, sujeira, bloqueio", harpex: "Limpo, silencioso, sem interrupção" },
-                  { criterio: "Relatório", trad: "Fotos sem rastreabilidade", harpex: "Modelo 3D + ART + GPS" },
-                  { criterio: "Validade", trad: "Sem padrão definido", harpex: "Aceito por prefeitura e CREA" },
-                ].map((row) => (
-                  <tr key={row.criterio} className="border-b border-[rgba(255,255,255,0.08)]">
-                    <td className="py-3 px-2 md:px-4 font-medium text-[#F0EDE8]">{row.criterio}</td>
-                    <td className="py-3 px-2 md:px-4 text-[#E84040]">{row.trad}</td>
-                    <td className="py-3 px-2 md:px-4 text-[#2ECC71]">{row.harpex}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
