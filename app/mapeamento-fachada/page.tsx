@@ -73,6 +73,12 @@ export default function MapeamentoFachadaPage() {
               O que é o Mapeamento 3D?
             </a>
             <a
+              href="#termografia"
+              className="font-sans text-sm text-[#8A8F9E] hover:text-[#C8A84B] transition-colors"
+            >
+              Termografia
+            </a>
+            <a
               href="#como-funciona"
               className="font-sans text-sm text-[#8A8F9E] hover:text-[#C8A84B] transition-colors"
             >
@@ -123,6 +129,13 @@ export default function MapeamentoFachadaPage() {
                 O que é o Mapeamento 3D?
               </a>
               <a
+                href="#termografia"
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-sans text-base text-[#F0EDE8] hover:text-[#C8A84B] transition-colors py-2"
+              >
+                Termografia
+              </a>
+              <a
                 href="#como-funciona"
                 onClick={() => setMobileMenuOpen(false)}
                 className="font-sans text-base text-[#C8A84B] transition-colors py-2"
@@ -151,7 +164,7 @@ export default function MapeamentoFachadaPage() {
 
               {/* Título H1 */}
               <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-6">
-                Inspeção de Fachada <span className="text-[#C8A84B]">com Drone</span>.<br />
+                Inspeção de Fachada <span className="text-[#C8A84B]">com Drone e Termografia</span>.<br />
               </h1>
 
               {/* Subtítulo */}
@@ -167,7 +180,7 @@ export default function MapeamentoFachadaPage() {
                   "Sem andaime ou rapel",
                   "Precisão milimétrica",
                   "Laudo técnico com ART",
-                  "Entrega em 7 dias úteis",
+                  "Entrega em até 15 dias",
                 ].map((benefit) => (
                   <span
                     key={benefit}
@@ -216,6 +229,52 @@ export default function MapeamentoFachadaPage() {
         </div>
       </section>
 
+      {/* 6. O QUE É O MAPEAMENTO 3D */}
+      <section id="mapeamento-3d" className="bg-[#131720] py-20 scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-6">
+            O que é a inspeção por mapeamento 3D da Fachada?
+          </h2>
+          <p className="font-sans text-[#8A8F9E] text-center max-w-3xl mx-auto mb-12">
+            Utilizamos drones profissionais para capturar centenas de fotos de alta resolução.
+            Essas imagens são processadas por software de fotogrametria, gerando um modelo 3D
+            navegável da fachada com precisão milimétrica.
+          </p>
+
+          {/* Imagem do software de reconstrução 3D */}
+          <div className="mb-12 rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+            <Image
+              src="/images/mapeamento-3d-plataforma.webp"
+              alt="Plataforma de mapeamento 3D exibindo modelo interativo da fachada norte com marcadores de anotações e painel de camadas"
+              width={1600}
+              height={859}
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { num: "01", title: "Modelo 3D Navegável", desc: "Visualize toda a fachada em um ambiente 3D interativo, com zoom e rotação." },
+              { num: "02", title: "Relatório Técnico com ART", desc: "Laudo completo assinado por engenheiro credenciado no CREA-SP." },
+              { num: "03", title: "Rastreabilidade Total", desc: "Cada imagem possui data, hora e coordenadas GPS precisas." },
+              { num: "04", title: "Medições Automáticas", desc: "Calcule distâncias, áreas e volumes diretamente no modelo 3D." },
+              { num: "05", title: "Marcação de Patologias", desc: "Trincas, infiltrações e descolamentos identificados." },
+              { num: "06", title: "Nuvem de Pontos 3D", desc: "Dados precisos para análises técnicas avançadas e projetos." },
+            ].map((item) => (
+              <div key={item.num} className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 relative overflow-hidden">
+                <span className="absolute -top-4 -right-2 font-display font-bold text-8xl text-[rgba(200,168,75,0.1)]">
+                  {item.num}
+                </span>
+                <div className="relative z-10">
+                  <h3 className="font-display font-bold text-xl text-[#C8A84B] mb-2">{item.title}</h3>
+                  <p className="font-sans text-[#8A8F9E] text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* VISUALIZADOR 3D INTERATIVO */}
       <section className="bg-[#0D1018] py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
@@ -230,7 +289,7 @@ export default function MapeamentoFachadaPage() {
           <div className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)] bg-[#131720]">
             <div className="w-full h-[400px] md:h-[500px] lg:h-[600px]">
               <iframe
-                src="https://platform.myxrobotics.com/twins/61164?invcode=Vv0PPibS"
+                src="https://app.one3d.ai/twins/61612?invcode=IUMeuTIj"
                 title="Visualizador 3D de Fachada - Harpex"
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; xr-spatial-tracking; fullscreen"
@@ -242,6 +301,172 @@ export default function MapeamentoFachadaPage() {
           <p className="text-center font-sans text-xs text-[#8A8F9E] mt-4">
             Use o mouse ou toque para girar e explorar o modelo 3D
           </p>
+        </div>
+      </section>
+
+      {/* CLASSIFICAÇÃO DE ANOMALIAS */}
+      <section className="relative bg-[#0D1018] py-16 md:py-24 overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+            {/* Coluna esquerda: edifício mapeado */}
+            <div className="relative flex flex-col items-center">
+              <Image
+                src="/images/hero-edificio-mapeado.png"
+                alt="Edifício mapeado em 3D com pontos de anomalias georreferenciados"
+                width={420}
+                height={560}
+                className="w-auto h-[340px] md:h-[440px] object-contain drop-shadow-2xl"
+              />
+              <p className="mt-4 font-sans text-xs text-[#8A8F9E] italic text-center">
+                *Mapeamento 3D real de cliente Harpex
+              </p>
+
+              {/* Seta decorativa (desktop) */}
+              <svg
+                className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 z-10"
+                width="130"
+                height="90"
+                viewBox="0 0 130 90"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 78 C 40 78, 60 40, 110 28"
+                  stroke="#C8A84B"
+                  strokeWidth="9"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+                <path d="M92 12 L122 24 L98 44 Z" fill="#C8A84B" />
+              </svg>
+            </div>
+
+            {/* Coluna direita: conteúdo */}
+            <div>
+              <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-[#F0EDE8] leading-tight text-balance mb-5">
+                Cada anomalia localizada é classificada e documentada no laudo técnico seguindo a norma{" "}
+                <span className="text-[#C8A84B]">ABNT NBR 16747</span>.
+              </h2>
+              <p className="font-sans text-[#8A8F9E] text-sm md:text-base leading-relaxed mb-6">
+                As anomalias da fachada viram um ponto georreferenciado no modelo, com tipo e nível de gravidade — o
+                síndico enxerga exatamente onde está cada problema e o que ele representa.
+              </p>
+
+              {/* Badges */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Índice de Gravidade", "Pontos Georreferenciados", "Registro Detalhado"].map((badge) => (
+                  <span
+                    key={badge}
+                    className="border border-[#C8A84B]/40 text-[#C8A84B] px-4 py-2 rounded-lg font-sans text-sm font-medium"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
+              {/* Detalhe da anomalia com card sobreposto */}
+              <div className="relative rounded-xl overflow-hidden border-2 border-[#C8A84B] bg-[#131720]">
+                <Image
+                  src="/images/detalhe-anomalia-fachada.png"
+                  alt="Detalhe ampliado de anomalia identificada na fachada"
+                  width={640}
+                  height={400}
+                  className="w-full h-[260px] md:h-[300px] object-cover"
+                />
+                {/* Bounding box da anomalia */}
+                <div className="absolute inset-4 border-2 border-[#C8A84B] rounded pointer-events-none" />
+
+                {/* Card de classificação */}
+                <div className="absolute top-3 right-3 w-40 md:w-48 bg-white rounded-lg shadow-2xl p-3 font-sans">
+                  <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-2">
+                    <span className="text-[10px] font-bold text-gray-900">P08 · Fissura</span>
+                    <span className="text-[9px] text-gray-400">NBR 16747</span>
+                  </div>
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Tipo</span>
+                      <span className="text-[9px] font-semibold text-gray-800">Revestimento</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Gravidade</span>
+                      <span className="text-[9px] font-bold text-white bg-[#E8A33D] px-1.5 py-0.5 rounded">Média</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[9px] text-gray-500">Localização</span>
+                      <span className="text-[9px] font-semibold text-gray-800">17º pav.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TERMOGRAFIA COM DRONE */}
+      <section id="termografia" className="bg-[#0D1018] py-20 scroll-mt-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Imagens: foto real + termografia */}
+            <div className="grid grid-cols-2 gap-4">
+              <figure className="relative rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+                <Image
+                  src="/images/termografia-rgb.jpg"
+                  alt="Foto real da fachada capturada por drone DJI M4T, mostrando parede de pastilhas cerâmicas entre janelas"
+                  width={640}
+                  height={480}
+                  className="w-full h-72 md:h-[420px] object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-black/70 text-[#F0EDE8] font-sans text-xs font-medium px-3 py-1.5 text-center">
+                  Foto real (RGB)
+                </figcaption>
+              </figure>
+              <figure className="relative rounded-xl overflow-hidden border border-[#C8A84B]/40">
+                <Image
+                  src="/images/termografia-termica.jpeg"
+                  alt="Imagem termográfica da mesma fachada, mostrando anomalias térmicas e infiltração em mapa de calor"
+                  width={640}
+                  height={480}
+                  className="w-full h-72 md:h-[420px] object-cover"
+                />
+                <figcaption className="absolute bottom-0 left-0 right-0 bg-[#C8A84B] text-black font-sans text-xs font-semibold px-3 py-1.5 text-center">
+                  Termografia
+                </figcaption>
+              </figure>
+            </div>
+
+            {/* Conteúdo */}
+            <div>
+              <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight text-balance mb-5">
+                <span className="text-[#C8A84B]">Termografia com Drone:</span> Descubra os desplacamentos antes da
+                queda
+              </h2>
+              <p className="font-sans text-[#8A8F9E] text-base leading-relaxed mb-8">
+                Identifique falhas invisíveis a olho nu com rapidez, segurança e alta precisão, reduzindo custos,
+                minimizando riscos e tomando decisões com base em dados técnicos confiáveis.
+              </p>
+
+              <h3 className="font-display font-bold text-lg text-[#F0EDE8] mb-4">Vantagens da Termografia com Drone</h3>
+              <ul className="space-y-3">
+                {[
+                  "Detecta anomalias invisíveis a olho nu.",
+                  "Localiza início de desplacamento de pastilhas.",
+                  "Localiza aquecimento anormal em instalações elétricas.",
+                  "Elimina a necessidade de acesso físico a áreas de risco.",
+                  "Reduz custos operacionais e tempo de inspeção.",
+                  "Não interfere na rotina do edifício ou da operação.",
+                  "Gera registros térmicos de alta qualidade para laudos técnicos.",
+                  "Permite ações preventivas antes que ocorram falhas de maior impacto.",
+                  "Aumenta a segurança da equipe, dispensando trabalhos em altura na maioria das inspeções.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 font-sans text-sm text-[#C4C7D0] leading-relaxed">
+                    <Check className="h-4 w-4 text-[#C8A84B] flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -267,7 +492,7 @@ export default function MapeamentoFachadaPage() {
                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="60" cy="60" r="55" stroke="#E84040" strokeWidth="6" fill="none" />
                   <line x1="25" y1="95" x2="95" y2="25" stroke="#F0EDE8" strokeWidth="6" />
-                  <text x="60" y="30" textAnchor="middle" fill="#E84040" fontSize="10" fontFamily="DM Mono" fontWeight="bold">AGORA É LEI</text>
+                  <text x="60" y="30" textAnchor="middle" fill="#E84040" fontSize="10" fontFamily="DM Mono" fontWeight="bold">AGORA �� LEI</text>
                 </svg>
               </div>
               {/* Conteúdo */}
@@ -293,29 +518,6 @@ export default function MapeamentoFachadaPage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Grid 2x2 */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { title: "Riscos para quem não faz", content: "Multas pesadas, processos judiciais, responsabilidade civil e criminal em caso de acidentes.", isRed: true },
-              { title: "O que a lei exige", content: "Laudo técnico com ART ou RRT, seguindo a NBR 16.747 para inspeção de edificações.", isRed: false },
-              { title: "Responsabilidade do síndico", content: "O síndico responde civil e criminalmente por omissão na manutenção predial.", isRed: true },
-              { title: "São Paulo exige há anos", content: "A fiscalização está cada vez mais rigorosa. Não espere ser notificado.", isRed: false },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className={`p-6 rounded-xl border ${card.isRed
-                  ? "bg-[rgba(232,64,64,0.08)] border-[rgba(232,64,64,0.2)]"
-                  : "bg-[#1A2030] border-[rgba(255,255,255,0.08)]"
-                  }`}
-              >
-                <h3 className={`font-display font-bold text-2xl mb-3 ${card.isRed ? "text-[#E84040]" : "text-[#F0EDE8]"}`}>
-                  {card.title}
-                </h3>
-                <p className="font-sans text-[#8A8F9E] text-sm leading-relaxed">{card.content}</p>
-              </div>
-            ))}
           </div>
 
           {/* Alerta Síndico */}
@@ -364,10 +566,6 @@ export default function MapeamentoFachadaPage() {
       {/* 5. PROBLEMA vs SOLUÇÃO */}
       <section className="bg-[#080A0E] py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-12">
-            O método antigo é <span className="text-[#8A8F9E]">ineficiente</span>.
-          </h2>
-
           {/* Desktop: Imagens comparativas lado a lado */}
           <div className="hidden md:grid md:grid-cols-2 gap-4 mb-12">
             {/* Inspe��ão Tradicional */}
@@ -436,7 +634,7 @@ export default function MapeamentoFachadaPage() {
               <ul className="space-y-4">
                 {[
                   "Mais econômico que o método tradicional",
-                  "Entrega do laudo em até 7 dias úteis",
+                  "Entrega do laudo em até 15 dias",
                   "Zero risco - operação 100% remota",
                   "100% da fachada mapeada, sem exceção",
                   "Limpo, silencioso, sem transtorno para moradores",
@@ -517,7 +715,7 @@ export default function MapeamentoFachadaPage() {
                 <ul className="space-y-3">
                   {[
                     "Mais econômico que o método tradicional",
-                    "Entrega do laudo em até 7 dias úteis",
+                    "Entrega do laudo em até 15 dias",
                     "Zero risco - operação 100% remota",
                     "100% da fachada mapeada, sem exceção",
                     "Limpo, silencioso, sem transtorno para moradores",
@@ -532,91 +730,6 @@ export default function MapeamentoFachadaPage() {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. O QUE É O MAPEAMENTO 3D */}
-      <section id="mapeamento-3d" className="bg-[#131720] py-20 scroll-mt-24">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-6">
-            O que é o Mapeamento 3D de Fachada?
-          </h2>
-          <p className="font-sans text-[#8A8F9E] text-center max-w-3xl mx-auto mb-12">
-            Utilizamos drones profissionais para capturar centenas de fotos de alta resolução.
-            Essas imagens são processadas por software de fotogrametria, gerando um modelo 3D
-            navegável da fachada com precisão milimétrica.
-          </p>
-
-          {/* Imagem do software de reconstrução 3D */}
-          <div className="mb-12 rounded-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
-            <Image
-              src="/images/fachada-3d.jpg"
-              alt="Software DroneDeploy mostrando reconstrução 3D de fachada com análise de desvio de superfície e mapa de calor"
-              width={1400}
-              height={800}
-              className="w-full h-auto"
-            />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { num: "01", title: "Modelo 3D Navegável", desc: "Visualize toda a fachada em um ambiente 3D interativo, com zoom e rotação." },
-              { num: "02", title: "Relatório Técnico com ART", desc: "Laudo completo assinado por engenheiro credenciado no CREA-SP." },
-              { num: "03", title: "Rastreabilidade Total", desc: "Cada imagem possui data, hora e coordenadas GPS precisas." },
-              { num: "04", title: "Medições Automáticas", desc: "Calcule distâncias, áreas e volumes diretamente no modelo 3D." },
-              { num: "05", title: "Marcação de Patologias", desc: "Trincas, infiltrações e descolamentos identificados." },
-              { num: "06", title: "Nuvem de Pontos 3D", desc: "Dados precisos para análises técnicas avançadas e projetos." },
-            ].map((item) => (
-              <div key={item.num} className="bg-[#1A2030] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 relative overflow-hidden">
-                <span className="absolute -top-4 -right-2 font-display font-bold text-8xl text-[rgba(200,168,75,0.1)]">
-                  {item.num}
-                </span>
-                <div className="relative z-10">
-                  <h3 className="font-display font-bold text-xl text-[#C8A84B] mb-2">{item.title}</h3>
-                  <p className="font-sans text-[#8A8F9E] text-sm">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. TABELA COMPARATIVA */}
-      <section className="bg-[#080A0E] py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-12">
-            Veja a diferença lado a lado.
-          </h2>
-
-          <div className="w-full">
-            <table className="w-full border-collapse table-fixed">
-              <thead>
-                <tr className="border-b border-[rgba(255,255,255,0.15)]">
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 w-[22%] md:w-auto">Critério</th>
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 text-[#8A8F9E] w-[39%] md:w-auto">Método Tradicional</th>
-                  <th className="font-display font-bold text-sm md:text-xl text-left py-3 px-2 md:px-4 text-[#C8A84B] w-[39%] md:w-auto">Harpex - Mapeamento 3D</th>
-                </tr>
-              </thead>
-              <tbody className="font-sans text-xs md:text-sm">
-                {[
-                  { criterio: "Segurança", trad: "Alto risco de acidentes", harpex: "Zero risco - 100% remoto" },
-                  { criterio: "Prazo", trad: "1 a 3 semanas", harpex: "Captura em horas + laudo em 7 dias" },
-                  { criterio: "Custo", trad: "R$ 15.000 a R$ 40.000+", harpex: "Método mais econômico e preciso" },
-                  { criterio: "Cobertura", trad: "Parcial - limitada", harpex: "100% da fachada mapeada" },
-                  { criterio: "Precisão", trad: "Subjetiva - depende do inspetor", harpex: "Milimétrica - gerada por software" },
-                  { criterio: "Transtorno", trad: "Barulho, sujeira, bloqueio", harpex: "Limpo, silencioso, sem interrupção" },
-                  { criterio: "Relatório", trad: "Fotos sem rastreabilidade", harpex: "Modelo 3D + ART + GPS" },
-                  { criterio: "Validade", trad: "Sem padrão definido", harpex: "Aceito por prefeitura e CREA" },
-                ].map((row) => (
-                  <tr key={row.criterio} className="border-b border-[rgba(255,255,255,0.08)]">
-                    <td className="py-3 px-2 md:px-4 font-medium text-[#F0EDE8]">{row.criterio}</td>
-                    <td className="py-3 px-2 md:px-4 text-[#E84040]">{row.trad}</td>
-                    <td className="py-3 px-2 md:px-4 text-[#2ECC71]">{row.harpex}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
@@ -679,7 +792,7 @@ export default function MapeamentoFachadaPage() {
               "Relatório com marcações de patologias",
               "Medidas e coordenadas",
               "Suporte na Apresentação",
-              "Laudo em até 7 dias úteis",
+                  "Laudo em até 15 dias",
             ].map((item) => (
               <div key={item} className="bg-[#131720] border border-[rgba(255,255,255,0.08)] rounded-xl p-6 flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[rgba(200,168,75,0.15)] border border-[#C8A84B] flex items-center justify-center">
@@ -788,7 +901,7 @@ export default function MapeamentoFachadaPage() {
             {[
               { q: "A inspeção de fachada é realmente obrigatória em São Paulo?", a: "Sim. A legislação municipal de São Paulo, aliada à NBR 16.747, exige inspeção periódica de fachadas em prédios com mais de 5 pavimentos ou área construída superior a 750m². O não cumprimento pode gerar multas de até R$ 50.000 e responsabilidade civil e criminal do síndico." },
               { q: "O laudo da Harpex é aceito pela prefeitura, CREA e engenheiros?", a: "Sim. Nosso laudo técnico inclui ART (Anotação de Responsabilidade Técnica) assinada por engenheiro credenciado no CREA-SP, atendendo todas as exigências legais." },
-              { q: "Quanto tempo leva o processo completo?", a: "A captura com drone leva de 2 a 6 horas, dependendo do tamanho do edifício. O processamento e elaboração do laudo técnico são entregues em até 7 dias úteis." },
+              { q: "Quanto tempo leva o processo completo?", a: "A captura com drone leva de 2 a 6 horas, dependendo do tamanho do edifício. O processamento e elaboração do laudo técnico são entregues em até 15 dias." },
               { q: "O mapeamento é seguro para os moradores?", a: "Sim, 100% seguro. A operação é totalmente remota, sem contato físico com o edifício. Nossos pilotos são certificados pela ANAC e seguimos todos os protocolos de segurança." },
               { q: "Qual o custo em comparação ao método tradicional?", a: "O mapeamento 3D com drone pode ser até 70% mais econômico que métodos tradicionais com andaime ou rapel. Solicite um orçamento personalizado para sua edificação." },
               { q: "O relatório serve para apresentar na assembleia?", a: "Sim. O modelo 3D interativo facilita muito a apresentação aos condôminos, permitindo visualizar claramente os pontos que necessitam de manutenção e justificando os investimentos necessários." },
